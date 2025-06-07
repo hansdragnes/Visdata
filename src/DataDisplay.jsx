@@ -1,3 +1,7 @@
+
+const weatherApiKey = import.meta.env.VITE_WEATHER_API_KEY;
+const catApiKey = import.meta.env.VITE_CAT_API_KEY;
+
 import React, { useEffect, useState } from 'react';
 
 function DataDisplay({ source }) {
