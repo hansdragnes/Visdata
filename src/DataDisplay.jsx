@@ -1,6 +1,7 @@
 
 const weatherApiKey = import.meta.env.VITE_WEATHER_API_KEY;
-const catApiKey = import.meta.env.VITE_CAT_API_KEY;
+const dogApiKey = import.meta.env.VITE_DOG_API_KEY;
+
 
 import React, { useEffect, useState } from 'react';
 
@@ -10,15 +11,12 @@ function DataDisplay({ source }) {
   useEffect(() => {
     async function fetchData() {
       let url = '';
-      if (source === 'countries') {
-        url = 'https://restcountries.com/v3.1/all';
-      } else if (source === 'weather') {
-        const city = 'Oslo';
-        const apiKey = 'DIN_API_NØKKEL'; // Sett inn din egen nøkkel
-        url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-      } else if (source === 'cats') {
-        url = 'https://api.thecatapi.com/v1/images/search';
+      if (source === 'carts') {
+        url = 'https://dummyjson.com/carts/';
       }
+
+
+
 
       try {
         const response = await fetch(url);
