@@ -55,6 +55,16 @@ function DataDisplay({ source }) {
     ? products.filter(item => String(item[filterField]).toLowerCase().includes(filterText.toLowerCase()))
     : products;
 
+  // Funksjon for å lagre filtrert resultat i LocalStorage
+  const handleSave = () => {
+    try {
+      localStorage.setItem('filtrert_resultat', JSON.stringify(filteredProducts));
+      alert('Filtrert resultat lagret i nettleseren!');
+    } catch (e) {
+      alert('Kunne ikke lagre resultatet.');
+    }
+  };
+
   return (
     <div>
       <h2>Data fra {source}</h2>
@@ -67,6 +77,9 @@ function DataDisplay({ source }) {
           availableFields={availableFields}
         />
       )}
+      <button onClick={handleSave} style={{ marginBottom: '1rem' }}>
+        Lagre filtrert resultat lokalt
+      </button>
       <pre>{JSON.stringify(filteredProducts, null, 2)}</pre>
     </div>
   );
