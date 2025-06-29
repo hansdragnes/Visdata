@@ -1,7 +1,3 @@
-const weatherApiKey = import.meta.env.VITE_WEATHER_API_KEY;
-const dogApiKey = import.meta.env.VITE_DOG_API_KEY;
-
-
 import React, { useEffect, useState } from 'react';
 import FilterPanel from './FilterPanel';
 
@@ -77,7 +73,7 @@ function DataDisplay({ source }) {
           availableFields={availableFields}
         />
       )}
-      <button onClick={handleSave} style={{ marginBottom: '1rem' }}>
+      <button onClick={handleSave}>
         Lagre filtrert resultat lokalt
       </button>
       <pre>{JSON.stringify(filteredProducts, null, 2)}</pre>
