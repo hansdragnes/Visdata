@@ -1,0 +1,52 @@
+[
+  {
+    "id": "01",
+    "sted": "Granlia",
+    "innbyggere": 1423
+  },
+  {
+    "id": "02",
+    "sted": "Bjørkheim",
+    "innbyggere": 876
+  },
+  {
+    "id": "03",
+    "sted": "Sundvika",
+    "innbyggere": 2331
+  },
+  {
+    "id": "04",
+    "sted": "Fosshagen",
+    "innbyggere": 1182
+  },
+  {
+    "id": "05",
+    "sted": "Kobbøya",
+    "innbyggere": 241
+  },
+  {
+    "id": "06",
+    "sted": "Lillesund",
+    "innbyggere": 2098
+  },
+  {
+    "id": "07",
+    "sted": "Tverrmoen",
+    "innbyggere": 649
+  },
+  {
+    "id": "08",
+    "sted": "Rognvik",
+    "innbyggere": 1745
+  },
+  {
+    "id": "09",
+    "sted": "Elvestrand",
+    "innbyggere": 994
+  },
+  {
+    "id": "10",
+    "sted": "Myrholt",
+    "innbyggere": 2203
+  }
+]

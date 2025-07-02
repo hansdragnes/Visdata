@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import FilterPanel from './FilterPanel';
+import { Alert, Button } from "@navikt/ds-react";
+
 
 function DataDisplay({ source }) {
   const [data, setData] = useState(null);
@@ -57,7 +59,7 @@ function DataDisplay({ source }) {
       localStorage.setItem('filtrert_resultat', JSON.stringify(filteredProducts));
       alert('Filtrert resultat lagret i nettleseren!');
     } catch (e) {
-      alert('Kunne ikke lagre resultatet.');
+      Alert('Kunne ikke lagre resultatet.');
     }
   };
 
@@ -73,9 +75,9 @@ function DataDisplay({ source }) {
           availableFields={availableFields}
         />
       )}
-      <button onClick={handleSave}>
+      <Button onClick={handleSave}>
         Lagre filtrert resultat lokalt
-      </button>
+      </Button>
       <pre>{JSON.stringify(filteredProducts, null, 2)}</pre>
     </div>
   );

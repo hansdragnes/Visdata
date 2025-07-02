@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 import DataSelector from './DataSelector';
 import DataDisplay from './DataDisplay';
-import PlaceSelector from './PlaceSelector';
+import "@navikt/ds-css";
+import { Button } from "@navikt/ds-react";
+import { GuidePanel } from "@navikt/ds-react";
+
+
+
 
 function App() {
   const [source, setSource] = useState('');
 
   return (
     <div style={{ padding: '2rem' }}>
-      <h1>Velg datakilde</h1>
+      
+      <GuidePanel>
+        Velg en datakilde
+        <DataSelector onSelect={setSource} />
+        {source && <DataDisplay source={source} />}
+      </GuidePanel>
      
-      <DataSelector onSelect={setSource} />
-      {source && <DataDisplay source={source} />}
+
     </div>
   );
+  
 }
 
 export default App;
