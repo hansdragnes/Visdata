@@ -3,8 +3,8 @@ import DataSelector from './DataSelector';
 import DataDisplay from './DataDisplay';
 import "@navikt/ds-css";
 import { Button } from "@navikt/ds-react";
-import { GuidePanel } from "@navikt/ds-react";
-
+import { HStack, GuidePanel } from "@navikt/ds-react";
+import Example from './Box'; 
 
 
 
@@ -15,11 +15,22 @@ function App() {
     <div style={{ padding: '2rem' }}>
       
       <GuidePanel>
-        Velg en datakilde
-        <DataSelector onSelect={setSource} />
+        <HStack gap="2" justify = "left">
+          Velg en datakilde
+          <DataSelector onSelect={setSource} />
+          <Button
+            variant="secondary"
+            onClick={() => setSource('')}
+            style={{ marginTop: '1rem' }}
+          />
+        </HStack>  
+        <Example/>
+    
         {source && <DataDisplay source={source} />}
+
+        
+        
       </GuidePanel>
-     
 
     </div>
   );
