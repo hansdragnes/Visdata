@@ -4,7 +4,8 @@ import DataDisplay from './DataDisplay';
 import "@navikt/ds-css";
 import { Button } from "@navikt/ds-react";
 import { Heading, HStack, GuidePanel } from "@navikt/ds-react";
-import Example from './Box'; 
+import DataEnhetsregister from './DataEnhetsregister'; 
+
 
 
 
@@ -25,8 +26,9 @@ function App() {
           >Nullstill</Button>
         </HStack>
     
-        {source && <DataDisplay source={source} />}
+        {source==="carts" && source && <DataDisplay source={source} />}
 
+        <DataEnhetsregister source={source} />
       </GuidePanel>
 
     </div>

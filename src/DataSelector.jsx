@@ -4,8 +4,10 @@ const DataSelector =({ onSelect }) =>{
   return (
     <select onChange={(e) => onSelect(e.target.value)} defaultValue="">
       <option value="" disabled>Velg en datakilde</option>
-      <option value="carts">Handlekurv fra dummyjson på nett</option>
-      <option value="places">Steder fra lokal fil</option>
+      <option value="carts">Dummyjson på nett</option>
+      <option value="places">Lokal fil</option>
+      <option value="company">Enhetsregisteret</option>
+
     </select>
   );
 }
